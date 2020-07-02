@@ -1,0 +1,32 @@
+{
+  "name": "@therealraluvy/memeinstall",
+  "version": "1.0.1",
+  "description": "Generates some fresh memes and saves as images to a specific directory",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "meme",
+    "generator",
+    "free",
+    "CLI",
+    "memes",
+    "download"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "bin": {
+    "memeinstall": "./bin/index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "figlet": "^1.4.0",
+    "image-downloader": "^4.0.1",
+    "node-fetch": "^2.6.0",
+    "yargs": "^15.3.1"
+  }
+}
