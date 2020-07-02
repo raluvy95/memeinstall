@@ -1,10 +1,17 @@
 {
   "name": "@therealraluvy/memeinstall",
-  "version": "1.0.1",
-  "description": "Generates some fresh memes and saves as images to a specific directory",
+  "version": "1.0.2",
+  "description": "A CLI module for downloading some memes as images and save to a specific directory",
   "main": "bin/index.js",
+  "bin": {
+    "memeinstall": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raluvy95/memeinstall.git"
   },
   "keywords": [
     "meme",
@@ -14,19 +21,10 @@
     "memes",
     "download"
   ],
-  "engines": {
-    "node": ">=10.0.0"
-  },
-  "author": "",
+  "author": "raluvy95",
   "license": "MIT",
-  "bin": {
-    "memeinstall": "./bin/index.js"
+  "bugs": {
+    "url": "https://github.com/raluvy95/memeinstall/issues"
   },
-  "dependencies": {
-    "chalk": "^4.1.0",
-    "figlet": "^1.4.0",
-    "image-downloader": "^4.0.1",
-    "node-fetch": "^2.6.0",
-    "yargs": "^15.3.1"
-  }
+  "homepage": "https://github.com/raluvy95/memeinstall#readme"
 }
