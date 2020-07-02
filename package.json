@@ -1,10 +1,10 @@
 {
   "name": "@therealraluvy/memeinstall",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A CLI module for downloading some memes as images and save to a specific directory",
   "main": "bin/index.js",
   "bin": {
-    "memeinstall": "index.js"
+    "memeinstall": "bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,10 +28,11 @@
   },
   "homepage": "https://github.com/raluvy95/memeinstall#readme",
   "dependencies": {
-    "chalk": "^4.1.0",	
-    "figlet": "^1.4.0",	
-    "image-downloader": "^4.0.1",	
-    "node-fetch": "^2.6.0",	
-    "yargs": "^15.3.1"	
-  }
+    "chalk": "^4.1.0",
+    "figlet": "^1.4.0",
+    "image-downloader": "^4.0.1",
+    "node-fetch": "^2.6.0",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {}
 }
