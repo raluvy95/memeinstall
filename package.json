@@ -26,5 +26,12 @@
   "bugs": {
     "url": "https://github.com/raluvy95/memeinstall/issues"
   },
-  "homepage": "https://github.com/raluvy95/memeinstall#readme"
+  "homepage": "https://github.com/raluvy95/memeinstall#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",	
+    "figlet": "^1.4.0",	
+    "image-downloader": "^4.0.1",	
+    "node-fetch": "^2.6.0",	
+    "yargs": "^15.3.1"	
+  }
 }
