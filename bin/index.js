@@ -8,6 +8,8 @@ const fetch = require("node-fetch");
 const imgd = require("image-downloader");
 const options = yargs
     .option("c", {alias: "count", describe: "Count of memes to generate", type: "number", demandOption: false})
+    .option("directory", {describe: "A name folder where should write.", type: "string", demandOption: false})
+    .option("no-gif", {describe: "Download non-GIF images only", type:"boolean"})
     .argv;
 if(!options.directory) {
     f("Meme Installer", (err, result) => {
@@ -20,7 +22,9 @@ if(!options.directory) {
     c.yellowBright("For example:"), c.cyanBright("memeinstall -c 25 --directory=memes"));
     console.log("");
     console.log("By default, Meme Installer will generate 10 memes. To improve more memes up to 50, use", c.yellowBright("memeinstall -c 50 --directory=folder"));
-} else {
+} 
+
+ else {
     function download(directory, url) {
         imgd.image({url: url,dest: directory}).then(({filename}) => {
             console.log(c.greenBright("[INFO] -"), `${filename} downloaded!`);
@@ -34,7 +38,13 @@ if(!options.directory) {
             const memes = m.count ? m.memes : m;
             if(memes instanceof Array) {
                 for(const meme of memes) {
-                    download(options.directory, meme.url);
+                    const filememe = meme.url.split(".");
+                    if((typeof options.gif != "undefined" && !options.gif) && filememe[filememe.length - 1] == "gif") {
+                        console.log(c.cyanBright("[SKIPPED] -"), "Skipped because the file is a GIF and it's not allowed by an option \"--no-gif\"");
+                        continue;
+                    } else {
+                        download(options.directory, meme.url);
+                    }
                 }
             } else {
                 download(options.directory, memes.url);
@@ -46,4 +56,4 @@ if(!options.directory) {
         console.log(c.redBright("I cannot find that folder. Please try again"));
     
     }
-}
+} 

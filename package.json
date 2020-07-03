@@ -1,6 +1,6 @@
 {
   "name": "@therealraluvy/memeinstall",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "A CLI module for downloading some memes as images and save to a specific directory",
   "main": "bin/index.js",
   "bin": {
